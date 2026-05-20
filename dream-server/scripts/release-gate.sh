@@ -40,4 +40,7 @@ echo "[gate] installer simulation"
 bash scripts/simulate-installers.sh
 "$PYTHON_CMD" scripts/validate-sim-summary.py artifacts/installer-sim/summary.json
 
+echo "[gate] update rollback"
+bash tests/test-update-rollback-contract.sh
+
 echo "[PASS] release gate"
